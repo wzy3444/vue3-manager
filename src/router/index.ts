@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,8 +16,17 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:catchAll(.*)',
     name: '404',
     component: () => import('../views/404.vue')
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: () => import('../views/layout/layout.vue')
+  },
+  {
+    path: '/container',
+    name: 'container',
+    component: () => import('../views/layout/container.vue')
   }
-
 ]
 
 const router = createRouter({
